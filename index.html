@@ -3,8 +3,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLACK LION 2°2°1 - Signalement WhatsApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>BLACK LION 2°2°1 • SIGNALEMENT WHATSAPP</title>
     <style>
         * {
             margin: 0;
@@ -13,137 +13,209 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0a0f0a 0%, #1a2a1a 100%);
-            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle at 20% 10%, #0B0B0B, #000000);
+            font-family: 'Segoe UI', 'Poppins', 'Arial', sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        .container {
+        /* Animation de brillance en arrière-plan */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.08) 0%, rgba(0,0,0,0) 70%);
+            animation: rotateGlow 20s infinite linear;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Carte principale style diamant noir */
+        .black-lion-card {
             background: rgba(0, 0, 0, 0.85);
-            border-radius: 30px;
-            padding: 40px;
-            max-width: 550px;
+            backdrop-filter: blur(8px);
+            border-radius: 60px;
+            border: 1px solid rgba(255, 200, 70, 0.5);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.8), 0 0 35px rgba(255, 180, 40, 0.3);
+            max-width: 660px;
             width: 100%;
-            text-align: center;
-            border: 3px solid #f7b32b;
-            box-shadow: 0 0 50px rgba(0, 255, 0, 0.2);
+            padding: 40px 32px 48px;
+            transition: 0.3s;
+            position: relative;
+            z-index: 2;
         }
 
-        .flags {
-            font-size: 50px;
-            margin-bottom: 10px;
-            letter-spacing: 10px;
+        .black-lion-card:hover {
+            border-color: #FFD966;
+            box-shadow: 0 30px 55px rgba(0,0,0,0.9), 0 0 60px rgba(255, 200, 50, 0.5);
+        }
+
+        /* En-tête avec drapeaux */
+        .flag-lion {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 52px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 6px gold);
         }
 
         h1 {
-            font-size: 28px;
-            background: linear-gradient(135deg, #f7b32b, #2ecc71);
+            font-size: 2.2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #F5E56B, #FFB347, #D4AF37);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .subtitle {
-            color: #f7b32b;
-            font-size: 14px;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #f7b32b;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .input-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        label {
-            color: #2ecc71;
-            font-weight: bold;
-            display: block;
+            font-weight: 800;
+            letter-spacing: 2px;
             margin-bottom: 8px;
-            font-size: 16px;
         }
 
-        input {
-            width: 100%;
-            padding: 15px;
-            background: #1e2a1e;
-            border: 2px solid #f7b32b;
+        .sub-lion {
+            text-align: center;
+            color: #FFD966;
+            font-weight: 600;
+            background: rgba(0,0,0,0.6);
+            display: table;
+            margin: 0 auto 25px auto;
+            padding: 6px 20px;
+            border-radius: 80px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+            border: 0.5px solid rgba(255,200,100,0.4);
+        }
+
+        .input-area {
+            margin: 20px 0 20px;
+        }
+
+        .label-num {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #FFDE9E;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            background: rgba(20,20,15,0.7);
+            padding: 6px 18px;
             border-radius: 50px;
-            color: white;
-            font-size: 18px;
+            width: fit-content;
+        }
+
+        .phone-input {
+            width: 100%;
+            background: #0F0F0F;
+            border: 1.8px solid #4A3E1F;
+            border-radius: 70px;
+            padding: 16px 24px;
+            font-size: 1.1rem;
+            color: #FFF2D7;
+            font-weight: 500;
+            transition: all 0.2s;
             outline: none;
-            transition: 0.3s;
+            letter-spacing: 0.5px;
         }
 
-        input:focus {
-            border-color: #2ecc71;
-            box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+        .phone-input:focus {
+            border-color: #FFC857;
+            box-shadow: 0 0 15px rgba(255,200,80,0.6);
+            background: #121212;
         }
 
-        button {
-            background: linear-gradient(135deg, #f7b32b, #2ecc71);
-            color: #000;
+        /* Bouton signaler */
+        .btn-report {
+            background: linear-gradient(95deg, #1E1A10, #2C2518);
+            border: 1px solid #FFD580;
+            border-radius: 70px;
+            padding: 16px 20px;
+            font-size: 1.3rem;
             font-weight: bold;
-            font-size: 20px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
+            color: #FFECB3;
             width: 100%;
-            margin-top: 10px;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        button:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(247, 179, 43, 0.5);
-        }
-
-        .info {
-            margin-top: 25px;
-            color: #aaa;
-            font-size: 12px;
-            background: #111;
-            padding: 15px;
-            border-radius: 15px;
-        }
-
-        .music-control {
-            margin-top: 20px;
-            padding: 10px;
-            background: #0a1a0a;
-            border-radius: 50px;
+            cursor: pointer;
+            margin: 18px 0 20px;
+            transition: 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: 0 5px 12px black;
         }
 
-        .music-btn {
-            background: #f7b32b;
-            color: #000;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 50px;
+        .btn-report:hover {
+            background: linear-gradient(95deg, #2C2518, #3F351F);
+            border-color: #FFE6A3;
+            color: #FFF3CF;
+            transform: scale(1.01);
+            box-shadow: 0 0 20px rgba(255,200,70,0.4);
+        }
+
+        .info-note {
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 28px;
+            padding: 14px 18px;
+            font-size: 0.75rem;
+            color: #BBBB88;
+            text-align: center;
+            border-left: 3px solid #FFC857;
+            margin-top: 18px;
+        }
+
+        /* Contrôle musique discret */
+        .music-status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            background: #0A0A0A99;
+            border-radius: 60px;
+            padding: 8px 18px;
+            backdrop-filter: blur(8px);
+            font-size: 0.8rem;
+        }
+
+        .music-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #FFD966;
+        }
+
+        .music-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .mini-btn {
+            background: #1C1C1C;
+            border: 1px solid #FFC857;
+            border-radius: 40px;
+            padding: 5px 16px;
+            color: #FFE3A4;
             cursor: pointer;
             font-weight: bold;
-            width: auto;
-            font-size: 14px;
+            transition: 0.2s;
+            font-size: 0.75rem;
         }
 
-        .music-status {
-            color: #2ecc71;
-            font-size: 12px;
+        .mini-btn:hover {
+            background: #FFC857;
+            color: black;
         }
 
         audio {
@@ -151,105 +223,166 @@
         }
 
         @media (max-width: 550px) {
-            .container {
-                padding: 25px;
+            .black-lion-card {
+                padding: 28px 20px 36px;
             }
             h1 {
-                font-size: 22px;
+                font-size: 1.6rem;
+            }
+            .flag-lion {
+                font-size: 40px;
+                gap: 12px;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="flags">
-        🇸🇳 ⚔️ 🇸🇳
+<div class="black-lion-card">
+    <div class="flag-lion">
+        <span>🇸🇳</span> <span>⚡🦁⚡</span> <span>🇸🇳</span>
     </div>
     <h1>BLACK LION 2°2°1</h1>
-    <div class="subtitle">⚡ SIGNALEMENT URGENT WHATSAPP ⚡</div>
+    <div class="sub-lion">🔞 SIGNALEMENT D'URGENCE WHATSAPP 🔞</div>
 
-    <div class="input-group">
-        <label>📞 Numéro de l'individu à signaler :</label>
-        <input type="tel" id="numero" placeholder="Ex: +221 77 123 45 67" value="">
+    <div class="input-area">
+        <div class="label-num">
+            <span>📞🔍</span> <span>NUMÉRO DE L'INDIVIDU DANGEREUX</span>
+        </div>
+        <input type="tel" id="numeroSuspect" class="phone-input" placeholder="Ex: +221 77 123 45 67" autocomplete="off">
     </div>
 
-    <button id="sendBtn">🚨 ENVOYER LE SIGNALEMENT 🚨</button>
+    <button id="sendReportBtn" class="btn-report">
+        ⚠️ ENVOYER SIGNALEMENT ⚠️
+    </button>
 
-    <div class="info">
-        ⚠️ En cliquant, vous allez ouvrir VOTRE email (Gmail, Outlook, etc.)<br>
-        Le message sera pré-rempli avec le numéro indiqué.<br>
-        Vous n'envoyez RIEN automatiquement — c'est VOUI qui validez l'envoi.
+    <div class="info-note">
+        ⚡ En cliquant, vous ouvrez VOTRE messagerie (Gmail, Outlook, etc.) avec le message pré-rempli.<br>
+        VOUS contrôlez l'envoi final. Aucune donnée n'est stockée.
     </div>
 
-    <div class="music-control">
-        <span class="music-status">🎵 MUSIQUE BLACK LION 🎵</span>
-        <button id="playMusic" class="music-btn">▶ LECTURE</button>
-        <button id="stopMusic" class="music-btn">⏹ STOP</button>
+    <div class="music-status-bar">
+        <div class="music-badge">
+            🎵 BLACK LION ANTHEM 🎵
+        </div>
+        <div class="music-buttons">
+            <button id="playMusicBtn" class="mini-btn">▶ LIRE</button>
+            <button id="stopMusicBtn" class="mini-btn">⏹ STOP</button>
+        </div>
     </div>
 </div>
 
-<audio id="bgMusic" loop>
+<audio id="lionMusic" loop preload="auto">
     <source src="song.mp3.m4a" type="audio/mpeg">
-    <source src="song.m4a" type="audio/x-m4a">
-    Votre navigateur ne supporte pas la musique.
+    <source src="song.mp3.m4a" type="audio/x-m4a">
+    Votre navigateur ne supporte pas l'audio.
 </audio>
 
 <script>
-    const numeroInput = document.getElementById('numero');
-    const sendBtn = document.getElementById('sendBtn');
-    const music = document.getElementById('bgMusic');
-    const playBtn = document.getElementById('playMusic');
-    const stopBtn = document.getElementById('stopMusic');
+    // Éléments
+    const numeroInput = document.getElementById('numeroSuspect');
+    const sendBtn = document.getElementById('sendReportBtn');
+    const music = document.getElementById('lionMusic');
+    const playBtn = document.getElementById('playMusicBtn');
+    const stopBtn = document.getElementById('stopMusicBtn');
+    
+    let musicStartedByTyping = false;   // évite de rejouer en boucle à chaque frappe
+    let userInteracted = false;          // pour gérer auto-play restrictions navigateur
 
-    // Email cible (support WhatsApp)
-    const EMAIL_TARGET = 'abuse@whatsapp.com';
-
-    sendBtn.addEventListener('click', function() {
-        let numero = numeroInput.value.trim();
-
-        if(numero === '') {
-            alert('❗ Veuillez entrer le numéro à signaler.');
-            return;
+    // ---------- MUSIQUE QUI DÉMARRE DÈS QUE L'UTILISATEUR TAPE LE PREMIER NUMÉRO ----------
+    function startMusicOnFirstChar() {
+        if (musicStartedByTyping) return;
+        
+        // On tente de lire la musique
+        let playPromise = music.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                musicStartedByTyping = true;
+                userInteracted = true;
+                console.log("🎵 Musique Black Lion démarrée après la première frappe.");
+            }).catch(error => {
+                // Bloqué par navigateur (nécessite interaction utilisateur explicite)
+                console.log("Auto-play bloqué, attente d'un clic utilisateur...");
+                // On ajoute un écouteur global pour démarrer dès le premier clic n'importe où
+                if (!userInteracted) {
+                    const startOnAnyClick = () => {
+                        music.play().then(() => {
+                            musicStartedByTyping = true;
+                            userInteracted = true;
+                        }).catch(e => console.log("Toujours bloqué"));
+                        document.removeEventListener('click', startOnAnyClick);
+                        document.removeEventListener('keydown', startOnAnyClick);
+                    };
+                    document.addEventListener('click', startOnAnyClick);
+                    document.addEventListener('keydown', startOnAnyClick);
+                }
+            });
         }
+    }
 
-        // Construction du message pré-rempli
-        let subject = encodeURIComponent('SIGNALEMENT URGENT - Individu dangereux sur WhatsApp');
-        let body = encodeURIComponent(
-            'Bonjour,\n\n' +
-            'Je signale un individu dangereux sur WhatsApp.\n\n' +
-            'Numéro à signaler : ' + numero + '\n\n' +
-            'Cette personne envoie des messages illégaux, tente des extorsions et menace des utilisateurs.\n\n' +
-            'Merci de prendre des mesures.\n\n' +
-            'Cordialement.'
-        );
-
-        let mailtoLink = `mailto:${EMAIL_TARGET}?subject=${subject}&body=${body}`;
-
-        // Ouvre l'email par défaut de l'utilisateur
-        window.location.href = mailtoLink;
+    // Détecter la première saisie dans le champ numéro
+    numeroInput.addEventListener('input', function firstInputHandler() {
+        if (!musicStartedByTyping && numeroInput.value.length > 0) {
+            startMusicOnFirstChar();
+        }
+        // Option : si l'utilisateur efface tout et retape, on ne redémarre pas (déjà started)
     });
 
-    // Musique
-    playBtn.addEventListener('click', function() {
-        music.play().catch(function(error) {
-            alert('❌ La musique ne peut pas être lue automatiquement. Cliquez sur la page puis réessayez.');
+    // Boutons manuels pour la musique
+    playBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        music.play().then(() => {
+            musicStartedByTyping = true;
+            userInteracted = true;
+        }).catch(err => {
+            alert("Cliquez quelque part sur la page puis réessayez (navigateur bloque l’auto lecture).");
         });
     });
 
-    stopBtn.addEventListener('click', function() {
+    stopBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
         music.pause();
         music.currentTime = 0;
     });
 
-    // Option : la musique peut démarrer au clic n'importe où pour éviter les blocages navigateur
-    document.body.addEventListener('click', function startMusicOnce() {
-        // décommenter la ligne ci-dessous si tu veux que la musique démarre au 1er clic
-        // music.play().catch(e => {});
-        document.body.removeEventListener('click', startMusicOnce);
-    });
-</script>
+    // ---------- ENVOI DU SIGNALEMENT AVEC LE TEXTE EXACT + NUMÉRO ----------
+    function buildMailtoURL(numero) {
+        const emailTarget = 'abuse@whatsapp.com';
+        
+        // Message selon ta demande exacte (avec saut de ligne propre)
+        const fullMessage = `🚨MAXIMUM CRIMINAL ACTIVITY ALERT - WHATSAPP❗️WhatsApp networks infiltrated by dangerous individuals⚠️One or more individuals are currently using WhatsApp to transmit extremely serious content, including illegal and shocking proposals.This is NOT normal spam.This is potentially criminal.🎯Goals: money extortion💰hijacking WhatsApp accounts🔓collecting personal data📁spreading illegal content☠️🚨Critical warning signs: mass messages without context📨suspicious links🔗shocking or illegal proposals😨requests for personal info or payment💳Pressure or urgency... see moreHere is his/her number: ${numero}`;
+        
+        const subject = "URGENT - Individual dangerous on WhatsApp - Criminal Activity";
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedBody = encodeURIComponent(fullMessage);
+        
+        return `mailto:${emailTarget}?subject=${encodedSubject}&body=${encodedBody}`;
+    }
 
+    sendBtn.addEventListener('click', function() {
+        let rawNumber = numeroInput.value.trim();
+        
+        if (rawNumber === "") {
+            alert("⚠️ Veuillez entrer le numéro de l'individu dangereux avant d'envoyer le signalement.");
+            return;
+        }
+        
+        // Construire le lien mailto
+        const mailLink = buildMailtoURL(rawNumber);
+        
+        // Ouvrir le client email par défaut (ordinateur / mobile)
+        window.location.href = mailLink;
+        
+        // Petit effet visuel : confirmation
+        sendBtn.style.transform = "scale(0.98)";
+        setTimeout(() => { sendBtn.style.transform = ""; }, 150);
+    });
+    
+    // Gestion : Si l'utilisateur n'a jamais tapé mais veut lancer la musique via bouton lecture
+    // on permet bien sûr via btn play déjà géré. Et on autorise aussi le démarrage au premier click input
+    // Pour améliorer l'expérience : si la musique n'a pas démarré après 2 secondes et que personne n'a tapé, on reste silencieux.
+    // Aucun auto-play intempestif.
+</script>
 </body>
 </html>
 🇸🇳 J O Y • B O Y 🇸🇳
