@@ -1,0 +1,255 @@
+🇸🇳 G A L S E N 🇸🇳
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK LION 2°2°1 - Signalement WhatsApp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0f0a 0%, #1a2a1a 100%);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            border: 3px solid #f7b32b;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.2);
+        }
+
+        .flags {
+            font-size: 50px;
+            margin-bottom: 10px;
+            letter-spacing: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            background: linear-gradient(135deg, #f7b32b, #2ecc71);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #f7b32b;
+            font-size: 14px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #f7b32b;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            color: #2ecc71;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            background: #1e2a1e;
+            border: 2px solid #f7b32b;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #2ecc71;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+        }
+
+        button {
+            background: linear-gradient(135deg, #f7b32b, #2ecc71);
+            color: #000;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(247, 179, 43, 0.5);
+        }
+
+        .info {
+            margin-top: 25px;
+            color: #aaa;
+            font-size: 12px;
+            background: #111;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .music-control {
+            margin-top: 20px;
+            padding: 10px;
+            background: #0a1a0a;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .music-btn {
+            background: #f7b32b;
+            color: #000;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            width: auto;
+            font-size: 14px;
+        }
+
+        .music-status {
+            color: #2ecc71;
+            font-size: 12px;
+        }
+
+        audio {
+            display: none;
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="flags">
+        🇸🇳 ⚔️ 🇸🇳
+    </div>
+    <h1>BLACK LION 2°2°1</h1>
+    <div class="subtitle">⚡ SIGNALEMENT URGENT WHATSAPP ⚡</div>
+
+    <div class="input-group">
+        <label>📞 Numéro de l'individu à signaler :</label>
+        <input type="tel" id="numero" placeholder="Ex: +221 77 123 45 67" value="">
+    </div>
+
+    <button id="sendBtn">🚨 ENVOYER LE SIGNALEMENT 🚨</button>
+
+    <div class="info">
+        ⚠️ En cliquant, vous allez ouvrir VOTRE email (Gmail, Outlook, etc.)<br>
+        Le message sera pré-rempli avec le numéro indiqué.<br>
+        Vous n'envoyez RIEN automatiquement — c'est VOUI qui validez l'envoi.
+    </div>
+
+    <div class="music-control">
+        <span class="music-status">🎵 MUSIQUE BLACK LION 🎵</span>
+        <button id="playMusic" class="music-btn">▶ LECTURE</button>
+        <button id="stopMusic" class="music-btn">⏹ STOP</button>
+    </div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+    <source src="song.m4a" type="audio/x-m4a">
+    Votre navigateur ne supporte pas la musique.
+</audio>
+
+<script>
+    const numeroInput = document.getElementById('numero');
+    const sendBtn = document.getElementById('sendBtn');
+    const music = document.getElementById('bgMusic');
+    const playBtn = document.getElementById('playMusic');
+    const stopBtn = document.getElementById('stopMusic');
+
+    // Email cible (support WhatsApp)
+    const EMAIL_TARGET = 'abuse@whatsapp.com';
+
+    sendBtn.addEventListener('click', function() {
+        let numero = numeroInput.value.trim();
+
+        if(numero === '') {
+            alert('❗ Veuillez entrer le numéro à signaler.');
+            return;
+        }
+
+        // Construction du message pré-rempli
+        let subject = encodeURIComponent('SIGNALEMENT URGENT - Individu dangereux sur WhatsApp');
+        let body = encodeURIComponent(
+            'Bonjour,\n\n' +
+            'Je signale un individu dangereux sur WhatsApp.\n\n' +
+            'Numéro à signaler : ' + numero + '\n\n' +
+            'Cette personne envoie des messages illégaux, tente des extorsions et menace des utilisateurs.\n\n' +
+            'Merci de prendre des mesures.\n\n' +
+            'Cordialement.'
+        );
+
+        let mailtoLink = `mailto:${EMAIL_TARGET}?subject=${subject}&body=${body}`;
+
+        // Ouvre l'email par défaut de l'utilisateur
+        window.location.href = mailtoLink;
+    });
+
+    // Musique
+    playBtn.addEventListener('click', function() {
+        music.play().catch(function(error) {
+            alert('❌ La musique ne peut pas être lue automatiquement. Cliquez sur la page puis réessayez.');
+        });
+    });
+
+    stopBtn.addEventListener('click', function() {
+        music.pause();
+        music.currentTime = 0;
+    });
+
+    // Option : la musique peut démarrer au clic n'importe où pour éviter les blocages navigateur
+    document.body.addEventListener('click', function startMusicOnce() {
+        // décommenter la ligne ci-dessous si tu veux que la musique démarre au 1er clic
+        // music.play().catch(e => {});
+        document.body.removeEventListener('click', startMusicOnce);
+    });
+</script>
+
+</body>
+</html>
+🇸🇳 J O Y • B O Y 🇸🇳
