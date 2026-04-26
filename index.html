@@ -13,225 +13,226 @@
         }
 
         body {
-            background: radial-gradient(circle at 20% 10%, #0B0B0B, #000000);
+            background: #030303;
             font-family: 'Segoe UI', 'Poppins', 'Arial', sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 32px 20px;
             position: relative;
-            overflow-x: hidden;
         }
 
-        /* Animation de brillance en arrière-plan */
+        /* Fond noir profond avec un très léger voile brillant */
         body::before {
             content: "";
             position: fixed;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,215,0,0.08) 0%, rgba(0,0,0,0) 70%);
-            animation: rotateGlow 20s infinite linear;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 200, 50, 0.08), transparent 70%);
             pointer-events: none;
             z-index: 0;
         }
 
-        @keyframes rotateGlow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Carte principale style diamant noir */
+        /* Carte principale – ouverte, respirante, noire brillante */
         .black-lion-card {
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            border-radius: 60px;
-            border: 1px solid rgba(255, 200, 70, 0.5);
-            box-shadow: 0 30px 50px rgba(0,0,0,0.8), 0 0 35px rgba(255, 180, 40, 0.3);
-            max-width: 660px;
+            background: #0a0a0a;
+            border-radius: 48px;
+            border: 1px solid rgba(255, 200, 70, 0.35);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 215, 0, 0.1), 0 0 30px rgba(255, 180, 40, 0.2);
+            max-width: 720px;
             width: 100%;
-            padding: 40px 32px 48px;
-            transition: 0.3s;
+            padding: 50px 48px 55px;
+            transition: 0.25s ease;
             position: relative;
             z-index: 2;
         }
 
         .black-lion-card:hover {
-            border-color: #FFD966;
-            box-shadow: 0 30px 55px rgba(0,0,0,0.9), 0 0 60px rgba(255, 200, 50, 0.5);
+            border-color: rgba(255, 200, 70, 0.7);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 1), 0 0 45px rgba(255, 200, 50, 0.4);
         }
 
-        /* En-tête avec drapeaux */
+        /* En-tête large et aéré */
         .flag-lion {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            font-size: 52px;
-            margin-bottom: 12px;
-            filter: drop-shadow(0 0 6px gold);
+            gap: 40px;
+            font-size: 64px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 8px #ffcc44);
         }
 
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.7rem;
             text-align: center;
             background: linear-gradient(135deg, #F5E56B, #FFB347, #D4AF37);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
         }
 
         .sub-lion {
             text-align: center;
             color: #FFD966;
             font-weight: 600;
-            background: rgba(0,0,0,0.6);
-            display: table;
-            margin: 0 auto 25px auto;
-            padding: 6px 20px;
+            background: rgba(20, 20, 15, 0.6);
+            display: inline-block;
+            width: auto;
+            margin: 0 auto 35px auto;
+            padding: 8px 28px;
             border-radius: 80px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             backdrop-filter: blur(4px);
-            border: 0.5px solid rgba(255,200,100,0.4);
+            border: 0.5px solid rgba(255, 200, 100, 0.5);
         }
 
+        /* Zone input ouverte */
         .input-area {
-            margin: 20px 0 20px;
+            margin: 30px 0 25px;
         }
 
         .label-num {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             color: #FFDE9E;
             font-weight: bold;
-            font-size: 1rem;
-            margin-bottom: 12px;
-            background: rgba(20,20,15,0.7);
-            padding: 6px 18px;
-            border-radius: 50px;
-            width: fit-content;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            background: transparent;
+            padding: 0;
         }
 
         .phone-input {
             width: 100%;
-            background: #0F0F0F;
-            border: 1.8px solid #4A3E1F;
-            border-radius: 70px;
-            padding: 16px 24px;
-            font-size: 1.1rem;
-            color: #FFF2D7;
+            background: #111111;
+            border: 1.5px solid #3a3522;
+            border-radius: 80px;
+            padding: 18px 28px;
+            font-size: 1.2rem;
+            color: #FFF5E0;
             font-weight: 500;
             transition: all 0.2s;
             outline: none;
-            letter-spacing: 0.5px;
         }
 
         .phone-input:focus {
             border-color: #FFC857;
-            box-shadow: 0 0 15px rgba(255,200,80,0.6);
-            background: #121212;
+            box-shadow: 0 0 18px rgba(255, 200, 80, 0.5);
+            background: #0e0e0e;
         }
 
-        /* Bouton signaler */
+        /* Bouton signaler grand et aéré */
         .btn-report {
-            background: linear-gradient(95deg, #1E1A10, #2C2518);
+            background: linear-gradient(95deg, #1a150c, #292116);
             border: 1px solid #FFD580;
-            border-radius: 70px;
-            padding: 16px 20px;
-            font-size: 1.3rem;
+            border-radius: 100px;
+            padding: 18px 24px;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #FFECB3;
             width: 100%;
             cursor: pointer;
-            margin: 18px 0 20px;
+            margin: 28px 0 24px;
             transition: 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            box-shadow: 0 5px 12px black;
+            gap: 15px;
+            letter-spacing: 1px;
         }
 
         .btn-report:hover {
-            background: linear-gradient(95deg, #2C2518, #3F351F);
+            background: linear-gradient(95deg, #292116, #3f351f);
             border-color: #FFE6A3;
-            color: #FFF3CF;
             transform: scale(1.01);
-            box-shadow: 0 0 20px rgba(255,200,70,0.4);
+            box-shadow: 0 0 26px rgba(255, 200, 70, 0.5);
         }
 
+        /* Note légère plus ouverte */
         .info-note {
-            background: rgba(0, 0, 0, 0.65);
-            border-radius: 28px;
-            padding: 14px 18px;
-            font-size: 0.75rem;
-            color: #BBBB88;
+            background: rgba(10, 10, 10, 0.8);
+            border-radius: 36px;
+            padding: 18px 24px;
+            font-size: 0.8rem;
+            color: #c0c088;
             text-align: center;
-            border-left: 3px solid #FFC857;
+            border-left: 4px solid #FFC857;
             margin-top: 18px;
+            line-height: 1.4;
         }
 
-        /* Contrôle musique discret */
+        /* Barre musique aérée */
         .music-status-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 25px;
-            background: #0A0A0A99;
-            border-radius: 60px;
-            padding: 8px 18px;
-            backdrop-filter: blur(8px);
-            font-size: 0.8rem;
+            margin-top: 32px;
+            background: #080808;
+            border-radius: 80px;
+            padding: 12px 24px;
+            border: 0.5px solid #2a2a1a;
         }
 
         .music-badge {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             color: #FFD966;
+            font-weight: 500;
         }
 
         .music-buttons {
             display: flex;
-            gap: 12px;
+            gap: 16px;
         }
 
         .mini-btn {
-            background: #1C1C1C;
+            background: #1a1a1a;
             border: 1px solid #FFC857;
-            border-radius: 40px;
-            padding: 5px 16px;
+            border-radius: 50px;
+            padding: 6px 20px;
             color: #FFE3A4;
             cursor: pointer;
             font-weight: bold;
             transition: 0.2s;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
         }
 
         .mini-btn:hover {
             background: #FFC857;
-            color: black;
+            color: #0a0a0a;
         }
 
         audio {
             display: none;
         }
 
-        @media (max-width: 550px) {
+        /* responsive plus ouvert */
+        @media (max-width: 620px) {
             .black-lion-card {
-                padding: 28px 20px 36px;
+                padding: 32px 24px 40px;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.9rem;
             }
             .flag-lion {
-                font-size: 40px;
-                gap: 12px;
+                font-size: 48px;
+                gap: 20px;
+            }
+            .btn-report {
+                font-size: 1.2rem;
+                padding: 14px 18px;
+            }
+            .phone-input {
+                padding: 14px 22px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -243,7 +244,9 @@
         <span>🇸🇳</span> <span>⚡🦁⚡</span> <span>🇸🇳</span>
     </div>
     <h1>BLACK LION 2°2°1</h1>
-    <div class="sub-lion">🔞 SIGNALEMENT D'URGENCE WHATSAPP 🔞</div>
+    <div style="text-align: center;">
+        <div class="sub-lion">🔞 SIGNALEMENT D'URGENCE WHATSAPP 🔞</div>
+    </div>
 
     <div class="input-area">
         <div class="label-num">
@@ -253,7 +256,7 @@
     </div>
 
     <button id="sendReportBtn" class="btn-report">
-        ⚠️ ENVOYER SIGNALEMENT ⚠️
+        ⚠️ ENVOYER LE SIGNALEMENT ⚠️
     </button>
 
     <div class="info-note">
@@ -279,37 +282,29 @@
 </audio>
 
 <script>
-    // Éléments
     const numeroInput = document.getElementById('numeroSuspect');
     const sendBtn = document.getElementById('sendReportBtn');
     const music = document.getElementById('lionMusic');
     const playBtn = document.getElementById('playMusicBtn');
     const stopBtn = document.getElementById('stopMusicBtn');
     
-    let musicStartedByTyping = false;   // évite de rejouer en boucle à chaque frappe
-    let userInteracted = false;          // pour gérer auto-play restrictions navigateur
+    let musicStartedByTyping = false;
+    let userInteracted = false;
 
-    // ---------- MUSIQUE QUI DÉMARRE DÈS QUE L'UTILISATEUR TAPE LE PREMIER NUMÉRO ----------
     function startMusicOnFirstChar() {
         if (musicStartedByTyping) return;
-        
-        // On tente de lire la musique
         let playPromise = music.play();
         if (playPromise !== undefined) {
             playPromise.then(() => {
                 musicStartedByTyping = true;
                 userInteracted = true;
-                console.log("🎵 Musique Black Lion démarrée après la première frappe.");
-            }).catch(error => {
-                // Bloqué par navigateur (nécessite interaction utilisateur explicite)
-                console.log("Auto-play bloqué, attente d'un clic utilisateur...");
-                // On ajoute un écouteur global pour démarrer dès le premier clic n'importe où
+            }).catch(() => {
                 if (!userInteracted) {
                     const startOnAnyClick = () => {
                         music.play().then(() => {
                             musicStartedByTyping = true;
                             userInteracted = true;
-                        }).catch(e => console.log("Toujours bloqué"));
+                        }).catch(() => {});
                         document.removeEventListener('click', startOnAnyClick);
                         document.removeEventListener('keydown', startOnAnyClick);
                     };
@@ -320,69 +315,47 @@
         }
     }
 
-    // Détecter la première saisie dans le champ numéro
-    numeroInput.addEventListener('input', function firstInputHandler() {
+    numeroInput.addEventListener('input', function() {
         if (!musicStartedByTyping && numeroInput.value.length > 0) {
             startMusicOnFirstChar();
         }
-        // Option : si l'utilisateur efface tout et retape, on ne redémarre pas (déjà started)
     });
 
-    // Boutons manuels pour la musique
-    playBtn.addEventListener('click', function(e) {
+    playBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         music.play().then(() => {
             musicStartedByTyping = true;
             userInteracted = true;
-        }).catch(err => {
-            alert("Cliquez quelque part sur la page puis réessayez (navigateur bloque l’auto lecture).");
+        }).catch(() => {
+            alert("🔊 Petit clic sur la page puis réessayez (le navigateur bloque l’auto lecture).");
         });
     });
 
-    stopBtn.addEventListener('click', function(e) {
+    stopBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         music.pause();
         music.currentTime = 0;
     });
 
-    // ---------- ENVOI DU SIGNALEMENT AVEC LE TEXTE EXACT + NUMÉRO ----------
     function buildMailtoURL(numero) {
         const emailTarget = 'abuse@whatsapp.com';
-        
-        // Message selon ta demande exacte (avec saut de ligne propre)
         const fullMessage = `🚨MAXIMUM CRIMINAL ACTIVITY ALERT - WHATSAPP❗️WhatsApp networks infiltrated by dangerous individuals⚠️One or more individuals are currently using WhatsApp to transmit extremely serious content, including illegal and shocking proposals.This is NOT normal spam.This is potentially criminal.🎯Goals: money extortion💰hijacking WhatsApp accounts🔓collecting personal data📁spreading illegal content☠️🚨Critical warning signs: mass messages without context📨suspicious links🔗shocking or illegal proposals😨requests for personal info or payment💳Pressure or urgency... see moreHere is his/her number: ${numero}`;
-        
         const subject = "URGENT - Individual dangerous on WhatsApp - Criminal Activity";
-        const encodedSubject = encodeURIComponent(subject);
-        const encodedBody = encodeURIComponent(fullMessage);
-        
-        return `mailto:${emailTarget}?subject=${encodedSubject}&body=${encodedBody}`;
+        return `mailto:${emailTarget}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullMessage)}`;
     }
 
-    sendBtn.addEventListener('click', function() {
+    sendBtn.addEventListener('click', () => {
         let rawNumber = numeroInput.value.trim();
-        
         if (rawNumber === "") {
-            alert("⚠️ Veuillez entrer le numéro de l'individu dangereux avant d'envoyer le signalement.");
+            alert("⚠️ Veuillez entrer le numéro de l'individu dangereux.");
             return;
         }
-        
-        // Construire le lien mailto
-        const mailLink = buildMailtoURL(rawNumber);
-        
-        // Ouvrir le client email par défaut (ordinateur / mobile)
-        window.location.href = mailLink;
-        
-        // Petit effet visuel : confirmation
-        sendBtn.style.transform = "scale(0.98)";
-        setTimeout(() => { sendBtn.style.transform = ""; }, 150);
+        window.location.href = buildMailtoURL(rawNumber);
+        sendBtn.style.transform = "scale(0.97)";
+        setTimeout(() => { sendBtn.style.transform = ""; }, 120);
     });
-    
-    // Gestion : Si l'utilisateur n'a jamais tapé mais veut lancer la musique via bouton lecture
-    // on permet bien sûr via btn play déjà géré. Et on autorise aussi le démarrage au premier click input
-    // Pour améliorer l'expérience : si la musique n'a pas démarré après 2 secondes et que personne n'a tapé, on reste silencieux.
-    // Aucun auto-play intempestif.
 </script>
 </body>
 </html>
+
 🇸🇳 J O Y • B O Y 🇸🇳
