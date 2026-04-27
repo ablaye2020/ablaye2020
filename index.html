@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>JOY BOY • BLACK LION 2°2°1 • SIGNALEMENT WHATSAPP</title>
     <style>
         * {
@@ -14,15 +14,21 @@
 
         body {
             background: #000000;
-            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, sans-serif;
+            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
             min-height: 100vh;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 32px 20px;
             position: relative;
+            overflow-x: hidden;
         }
 
+        html {
+            height: 100%;
+        }
+
+        /* Animation de fond brillant */
         body::before {
             content: "";
             position: fixed;
@@ -47,71 +53,74 @@
             z-index: 0;
         }
 
+        /* Carte principale plein écran */
         .prestige-card {
             background: linear-gradient(145deg, #0a0a0c 0%, #020202 100%);
-            border-radius: 56px;
-            border: 1px solid rgba(255, 200, 80, 0.5);
-            box-shadow: 0 35px 70px rgba(0,0,0,0.95), 0 0 0 1px rgba(255, 200, 70, 0.2), 0 0 50px rgba(255, 180, 40, 0.25);
-            max-width: 780px;
             width: 100%;
-            padding: 48px 48px 52px;
-            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            min-height: 100vh;
+            padding: 48px 32px 60px;
             position: relative;
             z-index: 2;
             backdrop-filter: blur(2px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 1px solid rgba(255, 200, 80, 0.25);
+            border-right: 1px solid rgba(255, 200, 80, 0.25);
         }
 
-        .prestige-card:hover {
-            border-color: rgba(255, 210, 90, 0.9);
-            box-shadow: 0 40px 85px rgba(0,0,0,1), 0 0 60px rgba(255, 200, 60, 0.45);
-            transform: translateY(-3px);
+        .content-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            width: 100%;
         }
 
+        /* En-tête */
         .hero-section {
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 35px;
         }
 
         .flags-joy {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 18px;
-            margin-bottom: 12px;
+            gap: 22px;
+            margin-bottom: 15px;
         }
 
         .flags-joy span {
-            font-size: 58px;
-            filter: drop-shadow(0 0 6px #ffcc44);
+            font-size: 64px;
+            filter: drop-shadow(0 0 10px #ffcc44);
             transition: transform 0.2s ease;
         }
 
         .flags-joy span:hover {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
         .joy-boy {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, #FFE6A3, #FFC857, #F5B042);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: 6px;
-            margin: 8px 0 4px;
-            text-shadow: 0 0 12px rgba(255,200,0,0.4);
+            letter-spacing: 8px;
+            margin: 10px 0 6px;
+            text-shadow: 0 0 15px rgba(255,200,0,0.5);
         }
 
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             text-align: center;
             background: linear-gradient(135deg, #FFDF85, #FFB347, #E89E2E);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             font-weight: 900;
-            letter-spacing: 2px;
-            margin: 6px 0 8px;
+            letter-spacing: 3px;
+            margin: 8px 0 10px;
         }
 
         .sub-lion {
@@ -121,87 +130,119 @@
             background: rgba(0,0,0,0.55);
             display: inline-block;
             width: auto;
-            margin: 0 auto 28px auto;
-            padding: 8px 28px;
+            margin: 0 auto 25px auto;
+            padding: 10px 32px;
             border-radius: 60px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 200, 100, 0.6);
+            border: 1px solid rgba(255, 200, 100, 0.7);
         }
 
-        /* Selecteur de support */
+        /* Sélection des supports - TRÈS CLAIRE */
         .support-selector {
-            margin: 20px 0 20px;
+            margin: 25px 0 25px;
         }
 
         .label-select {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             color: #FFE0A3;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 14px;
-            background: rgba(0,0,0,0.5);
-            padding: 6px 16px;
-            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.6);
+            padding: 10px 24px;
+            border-radius: 60px;
             width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,200,80,0.4);
         }
 
         .support-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-            margin-bottom: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-bottom: 15px;
         }
 
         .support-option {
             background: #0c0c0e;
-            border: 1.5px solid #3a3522;
-            border-radius: 60px;
-            padding: 14px 18px;
+            border: 2px solid #3a3522;
+            border-radius: 28px;
+            padding: 18px 20px;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 18px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
+            position: relative;
         }
 
         .support-option:hover {
             border-color: #FFC857;
-            background: #121216;
+            background: #141418;
+            transform: translateY(-3px);
         }
 
         .support-option.selected {
             border-color: #F5B042;
             background: linear-gradient(105deg, #1f1b10, #2a2318);
-            box-shadow: 0 0 12px rgba(245, 176, 66, 0.4);
+            box-shadow: 0 0 20px rgba(245, 176, 66, 0.5);
+        }
+
+        .support-option.selected::before {
+            content: "✓";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #F5B042;
+            color: #000;
+            font-weight: bold;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 0 8px gold;
         }
 
         .support-option input[type="radio"] {
             accent-color: #F5B042;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             cursor: pointer;
+            transform: scale(1.1);
         }
 
         .support-info {
             display: flex;
             flex-direction: column;
+            flex: 1;
         }
 
         .support-name {
             font-weight: bold;
             color: #FFDE9E;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .support-email {
             font-size: 0.7rem;
-            color: #aa9977;
+            color: #bbaa77;
             font-family: monospace;
+            margin-top: 4px;
         }
 
+        /* Zone numéro */
         .input-zone {
             margin: 20px 0 20px;
         }
@@ -209,21 +250,24 @@
         .label-phone {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             color: #FFE0A3;
             font-weight: 700;
             font-size: 1rem;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             background: rgba(0,0,0,0.5);
-            padding: 6px 16px;
-            border-radius: 40px;
+            padding: 8px 20px;
+            border-radius: 60px;
             width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .input-phone {
             width: 100%;
             background: #0c0c0e;
-            border: 1.8px solid #4a3e26;
+            border: 2px solid #4a3e26;
             border-radius: 80px;
             padding: 18px 28px;
             font-size: 1.2rem;
@@ -231,20 +275,24 @@
             font-weight: 500;
             transition: all 0.25s;
             outline: none;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.3rem;
         }
 
         .input-phone:focus {
             border-color: #F5B042;
-            box-shadow: 0 0 20px rgba(245, 176, 66, 0.6);
+            box-shadow: 0 0 25px rgba(245, 176, 66, 0.6);
             background: #0a0a0c;
         }
 
+        /* Bouton signaler */
         .cta-report {
             background: linear-gradient(105deg, #1f1b10, #2c251a);
-            border: 1px solid #FFCF7A;
+            border: 2px solid #FFCF7A;
             border-radius: 100px;
-            padding: 18px 24px;
-            font-size: 1.45rem;
+            padding: 18px 28px;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #FFEFC0;
             width: 100%;
@@ -254,38 +302,41 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.5);
+            gap: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
         .cta-report:hover {
             background: linear-gradient(105deg, #2c251a, #3f351f);
             border-color: #FFE6A3;
             transform: scale(1.01);
-            box-shadow: 0 0 28px rgba(255, 200, 70, 0.5);
+            box-shadow: 0 0 30px rgba(255, 200, 70, 0.5);
         }
 
+        /* Info */
         .info-glass {
-            background: rgba(5, 5, 5, 0.75);
-            border-radius: 32px;
-            padding: 16px 22px;
-            font-size: 0.75rem;
+            background: rgba(5, 5, 5, 0.7);
+            border-radius: 28px;
+            padding: 16px 24px;
+            font-size: 0.8rem;
             color: #C2BB88;
             text-align: center;
             border-left: 4px solid #FFC857;
-            margin: 18px 0 22px;
+            border-right: 4px solid #FFC857;
+            margin: 15px 0 20px;
             backdrop-filter: blur(4px);
         }
 
+        /* Musique */
         .music-panel {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 28px;
+            margin-top: 25px;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 60px;
-            padding: 10px 24px;
-            border: 0.5px solid rgba(255, 210, 80, 0.5);
+            padding: 12px 28px;
+            border: 1px solid rgba(255, 210, 80, 0.5);
             backdrop-filter: blur(8px);
         }
 
@@ -294,39 +345,41 @@
             align-items: center;
             gap: 14px;
             color: #FFD581;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 0.95rem;
         }
 
         .music-actions {
             display: flex;
-            gap: 14px;
+            gap: 16px;
         }
 
         .music-btn {
             background: #151515;
             border: 1px solid #FFC857;
-            border-radius: 40px;
-            padding: 6px 22px;
+            border-radius: 50px;
+            padding: 8px 24px;
             color: #FFE6B3;
             cursor: pointer;
             font-weight: bold;
             transition: 0.2s;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
         }
 
         .music-btn:hover {
             background: #FFC857;
             color: #000;
+            border-color: #FFF0C0;
         }
 
         audio {
             display: none;
         }
 
-        @media (max-width: 640px) {
+        /* Responsive */
+        @media (max-width: 680px) {
             .prestige-card {
-                padding: 32px 22px 38px;
+                padding: 30px 20px 45px;
             }
             h1 {
                 font-size: 1.8rem;
@@ -335,15 +388,23 @@
                 font-size: 44px;
             }
             .joy-boy {
-                font-size: 1.1rem;
-                letter-spacing: 3px;
+                font-size: 1.2rem;
+                letter-spacing: 4px;
             }
             .cta-report {
                 font-size: 1.1rem;
-                padding: 14px 16px;
+                padding: 14px 18px;
             }
             .support-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .support-option {
+                padding: 14px 16px;
+            }
+            .input-phone {
+                padding: 14px 20px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -351,83 +412,88 @@
 <body>
 
 <div class="prestige-card">
-    <div class="hero-section">
-        <div class="flags-joy">
-            <span>🇸🇳</span>
-            <span>⚡🦁⚡</span>
-            <span>🇸🇳</span>
-        </div>
-        <div class="joy-boy">
-            🇸🇳 J O Y • B O Y 🇸🇳
-        </div>
-        <h1>BLACK LION 2°2°1</h1>
-        <div style="text-align: center;">
-            <div class="sub-lion">
-                🔞 SIGNALEMENT D'URGENCE WHATSAPP 🔞
+    <div class="content-wrapper">
+        <div class="hero-section">
+            <div class="flags-joy">
+                <span>🇸🇳</span>
+                <span>⚡🦁⚡</span>
+                <span>🇸🇳</span>
             </div>
-        </div>
-    </div>
-
-    <!-- Sélection du support WhatsApp -->
-    <div class="support-selector">
-        <div class="label-select">
-            🛡️ CHOISISSEZ LE DESTINATAIRE 🛡️
-        </div>
-        <div class="support-grid" id="supportGrid">
-            <div class="support-option" data-email="abuse@whatsapp.com" data-name="WhatsApp Abuse">
-                <input type="radio" name="support" value="abuse@whatsapp.com" id="optAbuse" checked>
-                <div class="support-info">
-                    <span class="support-name">📧 WhatsApp Abuse</span>
-                    <span class="support-email">abuse@whatsapp.com</span>
-                </div>
+            <div class="joy-boy">
+                🇸🇳 J O Y • B O Y 🇸🇳
             </div>
-            <div class="support-option" data-email="safety@whatsapp.com" data-name="WhatsApp Safety">
-                <input type="radio" name="support" value="safety@whatsapp.com" id="optSafety">
-                <div class="support-info">
-                    <span class="support-name">🛡️ WhatsApp Safety</span>
-                    <span class="support-email">safety@whatsapp.com</span>
-                </div>
-            </div>
-            <div class="support-option" data-email="android@support.whatsapp.com" data-name="WhatsApp Android">
-                <input type="radio" name="support" value="android@support.whatsapp.com" id="optAndroid">
-                <div class="support-info">
-                    <span class="support-name">📱 WhatsApp Android</span>
-                    <span class="support-email">android@support.whatsapp.com</span>
-                </div>
-            </div>
-            <div class="support-option" data-email="ios@support.whatsapp.com" data-name="WhatsApp iOS">
-                <input type="radio" name="support" value="ios@support.whatsapp.com" id="optIOS">
-                <div class="support-info">
-                    <span class="support-name">🍏 WhatsApp iOS</span>
-                    <span class="support-email">ios@support.whatsapp.com</span>
+            <h1>BLACK LION 2°2°1</h1>
+            <div style="text-align: center;">
+                <div class="sub-lion">
+                    🔞 SIGNALEMENT D'URGENCE WHATSAPP 🔞
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="input-zone">
-        <div class="label-phone">
-            📞🔍 NUMÉRO DE L'INDIVIDU DANGEREUX
+        <!-- Sélection du support VISIBLE ET CLAIRE -->
+        <div class="support-selector">
+            <div class="label-select">
+                🎯 CHOISISSEZ LE SERVICE À CONTACTER 🎯
+            </div>
+            <div class="support-grid" id="supportGrid">
+                <div class="support-option" data-email="abuse@whatsapp.com" data-name="WhatsApp Abuse">
+                    <input type="radio" name="support" value="abuse@whatsapp.com" id="optAbuse" checked>
+                    <div class="support-info">
+                        <span class="support-name">🚨 WhatsApp Abuse</span>
+                        <span class="support-email">abuse@whatsapp.com</span>
+                    </div>
+                </div>
+                <div class="support-option" data-email="safety@whatsapp.com" data-name="WhatsApp Safety">
+                    <input type="radio" name="support" value="safety@whatsapp.com" id="optSafety">
+                    <div class="support-info">
+                        <span class="support-name">🛡️ WhatsApp Safety</span>
+                        <span class="support-email">safety@whatsapp.com</span>
+                    </div>
+                </div>
+                <div class="support-option" data-email="android@support.whatsapp.com" data-name="WhatsApp Android">
+                    <input type="radio" name="support" value="android@support.whatsapp.com" id="optAndroid">
+                    <div class="support-info">
+                        <span class="support-name">📱 WhatsApp Android</span>
+                        <span class="support-email">android@support.whatsapp.com</span>
+                    </div>
+                </div>
+                <div class="support-option" data-email="ios@support.whatsapp.com" data-name="WhatsApp iOS">
+                    <input type="radio" name="support" value="ios@support.whatsapp.com" id="optIOS">
+                    <div class="support-info">
+                        <span class="support-name">🍏 WhatsApp iOS</span>
+                        <span class="support-email">ios@support.whatsapp.com</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <input type="tel" id="numeroSuspect" class="input-phone" placeholder="Ex: +221 77 123 45 67" autocomplete="off">
-    </div>
 
-    <button id="sendReportBtn" class="cta-report">
-        🚨 ENVOYER LE SIGNALEMENT 🚨
-    </button>
-
-    <div class="info-glass">
-        ⚡ En cliquant, vous ouvrez VOTRE messagerie (Gmail, Outlook, etc.) avec le message pré-rempli vers le support choisi.<br>
-        VOUS contrôlez l'envoi final. Aucune donnée n'est stockée.
-    </div>
-
-    <div class="music-panel">
-        <div class="music-title">
-            🎵 BLACK LION ANTHEM 🎵
+        <!-- Numéro à signaler -->
+        <div class="input-zone">
+            <div class="label-phone">
+                📞🔍 NUMÉRO DE L'INDIVIDU DANGEREUX
+            </div>
+            <input type="tel" id="numeroSuspect" class="input-phone" placeholder="Ex: +221 77 123 45 67" autocomplete="off">
         </div>
-        <div class="music-actions">
-            <button id="playMusicBtn" class="music-btn">▶ LIRE</button>
-            <button id="stopMusicBtn" class="music-btn">⏹ STOP</button>
+
+        <!-- Bouton d'envoi -->
+        <button id="sendReportBtn" class="cta-report">
+            🚨 ENVOYER LE SIGNALEMENT 🚨
+        </button>
+
+        <div class="info-glass">
+            ⚡ En cliquant, vous ouvrez VOTRE messagerie (Gmail, Outlook, etc.) avec le message pré-rempli vers le support choisi.<br>
+            VOUS contrôlez l'envoi final. Aucune donnée n'est stockée.
+        </div>
+
+        <!-- Contrôle musique -->
+        <div class="music-panel">
+            <div class="music-title">
+                🎵 BLACK LION ANTHEM 🎵
+            </div>
+            <div class="music-actions">
+                <button id="playMusicBtn" class="music-btn">▶ LIRE</button>
+                <button id="stopMusicBtn" class="music-btn">⏹ STOP</button>
+            </div>
         </div>
     </div>
 </div>
@@ -445,15 +511,17 @@
     const playBtn = document.getElementById('playMusicBtn');
     const stopBtn = document.getElementById('stopMusicBtn');
     const supportOptions = document.querySelectorAll('.support-option');
-    let selectedEmail = 'abuse@whatsapp.com';
     
     let musicStartedByTyping = false;
     let userInteracted = false;
 
-    // Gestion sélection support
+    // Gestion sélection support avec mise en évidence
     supportOptions.forEach(option => {
         const radio = option.querySelector('input[type="radio"]');
-        option.addEventListener('click', () => {
+        option.addEventListener('click', (e) => {
+            if (e.target !== radio) {
+                radio.checked = true;
+            }
             radio.checked = true;
             selectedEmail = radio.value;
             supportOptions.forEach(opt => opt.classList.remove('selected'));
@@ -461,7 +529,6 @@
         });
         if (radio.checked) {
             option.classList.add('selected');
-            selectedEmail = radio.value;
         }
     });
 
@@ -524,7 +591,13 @@
             return;
         }
         
-        const emailTarget = document.querySelector('input[name="support"]:checked').value;
+        const selectedRadio = document.querySelector('input[name="support"]:checked');
+        if (!selectedRadio) {
+            alert("⚠️ Veuillez sélectionner un support.");
+            return;
+        }
+        
+        const emailTarget = selectedRadio.value;
         window.location.href = buildMailtoURL(rawNumber, emailTarget);
         
         sendBtn.style.transform = "scale(0.97)";
