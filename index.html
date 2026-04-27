@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>JOY BOY • BLACK LION 2°2°1 • SIGNALEMENT WHATSAPP</title>
+    <title>BLACK LYON 221 • SIGNALEMENT DANGER WHATSAPP</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +13,8 @@
         }
 
         body {
-            background: #000000;
-            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0a0000;
+            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, sans-serif;
             min-height: 100vh;
             height: 100%;
             display: flex;
@@ -28,7 +28,7 @@
             height: 100%;
         }
 
-        /* Animation de fond brillant */
+        /* Fond rouge danger animé */
         body::before {
             content: "";
             position: fixed;
@@ -36,7 +36,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 40% 30%, rgba(255, 215, 0, 0.12), transparent 70%);
+            background: radial-gradient(circle at 30% 20%, rgba(180, 0, 0, 0.3), rgba(0,0,0,0.95) 80%);
             pointer-events: none;
             z-index: 0;
         }
@@ -48,25 +48,34 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: repeating-linear-gradient(45deg, rgba(255,200,50,0.02) 0px, rgba(255,200,50,0.02) 2px, transparent 2px, transparent 8px);
+            background: repeating-linear-gradient(45deg, rgba(200,0,0,0.05) 0px, rgba(200,0,0,0.05) 2px, transparent 2px, transparent 10px);
             pointer-events: none;
             z-index: 0;
         }
 
-        /* Carte principale plein écran */
-        .prestige-card {
-            background: linear-gradient(145deg, #0a0a0c 0%, #020202 100%);
+        /* Animation de particules rouge */
+        @keyframes pulseRed {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes borderGlow {
+            0% { border-color: rgba(220, 20, 20, 0.5); box-shadow: 0 0 10px rgba(220,20,20,0.3); }
+            100% { border-color: rgba(255, 60, 60, 0.9); box-shadow: 0 0 35px rgba(255,0,0,0.6); }
+        }
+
+        /* Carte principale rouge luxe */
+        .danger-card {
+            background: linear-gradient(145deg, #0a0202 0%, #010000 100%);
             width: 100%;
             min-height: 100vh;
             padding: 48px 32px 60px;
             position: relative;
             z-index: 2;
-            backdrop-filter: blur(2px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-left: 1px solid rgba(255, 200, 80, 0.25);
-            border-right: 1px solid rgba(255, 200, 80, 0.25);
+            backdrop-filter: blur(3px);
+            border-left: 2px solid rgba(220, 20, 20, 0.6);
+            border-right: 2px solid rgba(220, 20, 20, 0.6);
+            animation: borderGlow 2s infinite alternate;
         }
 
         .content-wrapper {
@@ -75,7 +84,7 @@
             width: 100%;
         }
 
-        /* En-tête */
+        /* En-tête luxe rouge */
         .hero-section {
             text-align: center;
             margin-bottom: 35px;
@@ -91,7 +100,7 @@
 
         .flags-joy span {
             font-size: 64px;
-            filter: drop-shadow(0 0 10px #ffcc44);
+            filter: drop-shadow(0 0 12px #ff3300);
             transition: transform 0.2s ease;
         }
 
@@ -100,34 +109,34 @@
         }
 
         .joy-boy {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #FFE6A3, #FFC857, #F5B042);
+            background: linear-gradient(135deg, #FF4444, #FF0000, #CC0000);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             letter-spacing: 8px;
             margin: 10px 0 6px;
-            text-shadow: 0 0 15px rgba(255,200,0,0.5);
+            text-shadow: 0 0 20px rgba(255,0,0,0.6);
         }
 
         h1 {
             font-size: 2.6rem;
             text-align: center;
-            background: linear-gradient(135deg, #FFDF85, #FFB347, #E89E2E);
+            background: linear-gradient(135deg, #FF6666, #FF0000, #AA0000);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             margin: 8px 0 10px;
         }
 
         .sub-lion {
             text-align: center;
-            color: #FFDE8A;
-            font-weight: 600;
-            background: rgba(0,0,0,0.55);
+            color: #FF8888;
+            font-weight: 700;
+            background: rgba(80, 0, 0, 0.7);
             display: inline-block;
             width: auto;
             margin: 0 auto 25px auto;
@@ -135,10 +144,11 @@
             border-radius: 60px;
             font-size: 0.9rem;
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 200, 100, 0.7);
+            border: 1px solid rgba(255, 50, 50, 0.8);
+            text-shadow: 0 0 5px red;
         }
 
-        /* Sélection des supports - TRÈS CLAIRE */
+        /* Sélection des supports */
         .support-selector {
             margin: 25px 0 25px;
         }
@@ -148,18 +158,18 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            color: #FFE0A3;
+            color: #FFAAAA;
             font-weight: 800;
             font-size: 1.1rem;
             margin-bottom: 20px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(80, 0, 0, 0.6);
             padding: 10px 24px;
             border-radius: 60px;
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,200,80,0.4);
+            border: 1px solid rgba(255, 50, 50, 0.6);
         }
 
         .support-grid {
@@ -170,8 +180,8 @@
         }
 
         .support-option {
-            background: #0c0c0e;
-            border: 2px solid #3a3522;
+            background: #0a0303;
+            border: 2px solid #4a1515;
             border-radius: 28px;
             padding: 18px 20px;
             display: flex;
@@ -183,37 +193,37 @@
         }
 
         .support-option:hover {
-            border-color: #FFC857;
-            background: #141418;
+            border-color: #FF4444;
+            background: #1a0505;
             transform: translateY(-3px);
         }
 
         .support-option.selected {
-            border-color: #F5B042;
-            background: linear-gradient(105deg, #1f1b10, #2a2318);
-            box-shadow: 0 0 20px rgba(245, 176, 66, 0.5);
+            border-color: #FF0000;
+            background: linear-gradient(105deg, #2a0a0a, #1f0505);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
         }
 
         .support-option.selected::before {
-            content: "✓";
+            content: "⚠️";
             position: absolute;
-            top: -10px;
-            right: -10px;
-            background: #F5B042;
-            color: #000;
+            top: -12px;
+            right: -12px;
+            background: #FF0000;
+            color: white;
             font-weight: bold;
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            box-shadow: 0 0 8px gold;
+            font-size: 18px;
+            box-shadow: 0 0 12px red;
         }
 
         .support-option input[type="radio"] {
-            accent-color: #F5B042;
+            accent-color: #FF0000;
             width: 22px;
             height: 22px;
             cursor: pointer;
@@ -228,7 +238,7 @@
 
         .support-name {
             font-weight: bold;
-            color: #FFDE9E;
+            color: #FFAAAA;
             font-size: 1rem;
             display: flex;
             align-items: center;
@@ -237,7 +247,7 @@
 
         .support-email {
             font-size: 0.7rem;
-            color: #bbaa77;
+            color: #aa6666;
             font-family: monospace;
             margin-top: 4px;
         }
@@ -252,11 +262,11 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            color: #FFE0A3;
+            color: #FFAAAA;
             font-weight: 700;
             font-size: 1rem;
             margin-bottom: 16px;
-            background: rgba(0,0,0,0.5);
+            background: rgba(80, 0, 0, 0.5);
             padding: 8px 20px;
             border-radius: 60px;
             width: fit-content;
@@ -266,12 +276,12 @@
 
         .input-phone {
             width: 100%;
-            background: #0c0c0e;
-            border: 2px solid #4a3e26;
+            background: #0a0202;
+            border: 2px solid #5a2020;
             border-radius: 80px;
             padding: 18px 28px;
             font-size: 1.2rem;
-            color: #FFF8E7;
+            color: #FFDDDD;
             font-weight: 500;
             transition: all 0.25s;
             outline: none;
@@ -281,20 +291,20 @@
         }
 
         .input-phone:focus {
-            border-color: #F5B042;
-            box-shadow: 0 0 25px rgba(245, 176, 66, 0.6);
-            background: #0a0a0c;
+            border-color: #FF3333;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+            background: #0a0000;
         }
 
-        /* Bouton signaler */
+        /* Bouton signaler rouge */
         .cta-report {
-            background: linear-gradient(105deg, #1f1b10, #2c251a);
-            border: 2px solid #FFCF7A;
+            background: linear-gradient(105deg, #2a0a0a, #4a1010);
+            border: 2px solid #FF3333;
             border-radius: 100px;
             padding: 18px 28px;
             font-size: 1.5rem;
             font-weight: bold;
-            color: #FFEFC0;
+            color: #FFCCCC;
             width: 100%;
             cursor: pointer;
             margin: 20px 0 18px;
@@ -307,22 +317,22 @@
         }
 
         .cta-report:hover {
-            background: linear-gradient(105deg, #2c251a, #3f351f);
-            border-color: #FFE6A3;
+            background: linear-gradient(105deg, #4a1010, #6a1515);
+            border-color: #FF6666;
             transform: scale(1.01);
-            box-shadow: 0 0 30px rgba(255, 200, 70, 0.5);
+            box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
         }
 
         /* Info */
         .info-glass {
-            background: rgba(5, 5, 5, 0.7);
+            background: rgba(30, 0, 0, 0.7);
             border-radius: 28px;
             padding: 16px 24px;
             font-size: 0.8rem;
-            color: #C2BB88;
+            color: #DD9999;
             text-align: center;
-            border-left: 4px solid #FFC857;
-            border-right: 4px solid #FFC857;
+            border-left: 4px solid #FF0000;
+            border-right: 4px solid #FF0000;
             margin: 15px 0 20px;
             backdrop-filter: blur(4px);
         }
@@ -333,10 +343,10 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 25px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(30, 0, 0, 0.7);
             border-radius: 60px;
             padding: 12px 28px;
-            border: 1px solid rgba(255, 210, 80, 0.5);
+            border: 1px solid rgba(255, 50, 50, 0.6);
             backdrop-filter: blur(8px);
         }
 
@@ -344,7 +354,7 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            color: #FFD581;
+            color: #FF8888;
             font-weight: 700;
             font-size: 0.95rem;
         }
@@ -355,11 +365,11 @@
         }
 
         .music-btn {
-            background: #151515;
-            border: 1px solid #FFC857;
+            background: #1a0505;
+            border: 1px solid #FF4444;
             border-radius: 50px;
             padding: 8px 24px;
-            color: #FFE6B3;
+            color: #FFAAAA;
             cursor: pointer;
             font-weight: bold;
             transition: 0.2s;
@@ -367,22 +377,21 @@
         }
 
         .music-btn:hover {
-            background: #FFC857;
+            background: #FF0000;
             color: #000;
-            border-color: #FFF0C0;
+            border-color: #FF8888;
         }
 
         audio {
             display: none;
         }
 
-        /* Responsive */
         @media (max-width: 680px) {
-            .prestige-card {
+            .danger-card {
                 padding: 30px 20px 45px;
             }
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
             .flags-joy span {
                 font-size: 44px;
@@ -397,21 +406,13 @@
             }
             .support-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .support-option {
-                padding: 14px 16px;
-            }
-            .input-phone {
-                padding: 14px 20px;
-                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="prestige-card">
+<div class="danger-card">
     <div class="content-wrapper">
         <div class="hero-section">
             <div class="flags-joy">
@@ -420,44 +421,44 @@
                 <span>🇸🇳</span>
             </div>
             <div class="joy-boy">
-                🇸🇳 J O Y • B O Y 🇸🇳
+                🇸🇳 B L A C K • L Y O N • 2 2 1 🇸🇳
             </div>
-            <h1>BLACK LION 2°2°1</h1>
+            <h1>BLACK LYON 221</h1>
             <div style="text-align: center;">
                 <div class="sub-lion">
-                    🔞 SIGNALEMENT D'URGENCE WHATSAPP 🔞
+                    🔴 SIGNALEMENT D'URGENCE WHATSAPP 🔴
                 </div>
             </div>
         </div>
 
-        <!-- Sélection du support VISIBLE ET CLAIRE -->
+        <!-- Sélection du support -->
         <div class="support-selector">
             <div class="label-select">
                 🎯 CHOISISSEZ LE SERVICE À CONTACTER 🎯
             </div>
             <div class="support-grid" id="supportGrid">
-                <div class="support-option" data-email="abuse@whatsapp.com" data-name="WhatsApp Abuse">
+                <div class="support-option" data-email="abuse@whatsapp.com">
                     <input type="radio" name="support" value="abuse@whatsapp.com" id="optAbuse" checked>
                     <div class="support-info">
                         <span class="support-name">🚨 WhatsApp Abuse</span>
                         <span class="support-email">abuse@whatsapp.com</span>
                     </div>
                 </div>
-                <div class="support-option" data-email="safety@whatsapp.com" data-name="WhatsApp Safety">
+                <div class="support-option" data-email="safety@whatsapp.com">
                     <input type="radio" name="support" value="safety@whatsapp.com" id="optSafety">
                     <div class="support-info">
                         <span class="support-name">🛡️ WhatsApp Safety</span>
                         <span class="support-email">safety@whatsapp.com</span>
                     </div>
                 </div>
-                <div class="support-option" data-email="android@support.whatsapp.com" data-name="WhatsApp Android">
+                <div class="support-option" data-email="android@support.whatsapp.com">
                     <input type="radio" name="support" value="android@support.whatsapp.com" id="optAndroid">
                     <div class="support-info">
                         <span class="support-name">📱 WhatsApp Android</span>
                         <span class="support-email">android@support.whatsapp.com</span>
                     </div>
                 </div>
-                <div class="support-option" data-email="ios@support.whatsapp.com" data-name="WhatsApp iOS">
+                <div class="support-option" data-email="ios@support.whatsapp.com">
                     <input type="radio" name="support" value="ios@support.whatsapp.com" id="optIOS">
                     <div class="support-info">
                         <span class="support-name">🍏 WhatsApp iOS</span>
@@ -467,7 +468,7 @@
             </div>
         </div>
 
-        <!-- Numéro à signaler -->
+        <!-- Numéro -->
         <div class="input-zone">
             <div class="label-phone">
                 📞🔍 NUMÉRO DE L'INDIVIDU DANGEREUX
@@ -475,7 +476,6 @@
             <input type="tel" id="numeroSuspect" class="input-phone" placeholder="Ex: +221 77 123 45 67" autocomplete="off">
         </div>
 
-        <!-- Bouton d'envoi -->
         <button id="sendReportBtn" class="cta-report">
             🚨 ENVOYER LE SIGNALEMENT 🚨
         </button>
@@ -485,10 +485,9 @@
             VOUS contrôlez l'envoi final. Aucune donnée n'est stockée.
         </div>
 
-        <!-- Contrôle musique -->
         <div class="music-panel">
             <div class="music-title">
-                🎵 BLACK LION ANTHEM 🎵
+                🎵 BLACK LYON ANTHEM 🎵
             </div>
             <div class="music-actions">
                 <button id="playMusicBtn" class="music-btn">▶ LIRE</button>
@@ -501,7 +500,6 @@
 <audio id="lionMusic" loop preload="auto">
     <source src="song.mp3.m4a" type="audio/mpeg">
     <source src="song.mp3.m4a" type="audio/x-m4a">
-    Votre navigateur ne supporte pas l'audio.
 </audio>
 
 <script>
@@ -515,15 +513,10 @@
     let musicStartedByTyping = false;
     let userInteracted = false;
 
-    // Gestion sélection support avec mise en évidence
     supportOptions.forEach(option => {
         const radio = option.querySelector('input[type="radio"]');
-        option.addEventListener('click', (e) => {
-            if (e.target !== radio) {
-                radio.checked = true;
-            }
+        option.addEventListener('click', () => {
             radio.checked = true;
-            selectedEmail = radio.value;
             supportOptions.forEach(opt => opt.classList.remove('selected'));
             option.classList.add('selected');
         });
@@ -534,26 +527,20 @@
 
     function startMusicOnFirstChar() {
         if (musicStartedByTyping) return;
-        let playPromise = music.play();
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                musicStartedByTyping = true;
-                userInteracted = true;
-            }).catch(() => {
-                if (!userInteracted) {
-                    const startOnAnyClick = () => {
-                        music.play().then(() => {
-                            musicStartedByTyping = true;
-                            userInteracted = true;
-                        }).catch(() => {});
-                        document.removeEventListener('click', startOnAnyClick);
-                        document.removeEventListener('keydown', startOnAnyClick);
-                    };
-                    document.addEventListener('click', startOnAnyClick);
-                    document.addEventListener('keydown', startOnAnyClick);
-                }
-            });
-        }
+        music.play().then(() => {
+            musicStartedByTyping = true;
+            userInteracted = true;
+        }).catch(() => {
+            if (!userInteracted) {
+                const startOnAnyClick = () => {
+                    music.play().catch(() => {});
+                    document.removeEventListener('click', startOnAnyClick);
+                    document.removeEventListener('keydown', startOnAnyClick);
+                };
+                document.addEventListener('click', startOnAnyClick);
+                document.addEventListener('keydown', startOnAnyClick);
+            }
+        });
     }
 
     numeroInput.addEventListener('input', function() {
@@ -562,18 +549,11 @@
         }
     });
 
-    playBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        music.play().then(() => {
-            musicStartedByTyping = true;
-            userInteracted = true;
-        }).catch(() => {
-            alert("🔊 Cliquez sur la page puis réessayez (le navigateur bloque l'auto lecture).");
-        });
+    playBtn.addEventListener('click', () => {
+        music.play().catch(() => alert("🔊 Cliquez sur la page puis réessayez."));
     });
 
-    stopBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
+    stopBtn.addEventListener('click', () => {
         music.pause();
         music.currentTime = 0;
     });
@@ -590,16 +570,12 @@
             alert("⚠️ Veuillez entrer le numéro de l'individu dangereux.");
             return;
         }
-        
         const selectedRadio = document.querySelector('input[name="support"]:checked');
         if (!selectedRadio) {
             alert("⚠️ Veuillez sélectionner un support.");
             return;
         }
-        
-        const emailTarget = selectedRadio.value;
-        window.location.href = buildMailtoURL(rawNumber, emailTarget);
-        
+        window.location.href = buildMailtoURL(rawNumber, selectedRadio.value);
         sendBtn.style.transform = "scale(0.97)";
         setTimeout(() => { sendBtn.style.transform = ""; }, 120);
     });
